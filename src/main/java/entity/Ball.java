@@ -11,7 +11,7 @@ import main.GameWindow;
 public class Ball implements GameEntity {
 //campi
 
-    public static final int SIZE = 15;
+    public static final int SIZE = 20;
     public double x, y, dx, dy; //dx , dy velocit� di direzione x e y.
     //collisioni
     public double xdest, ydest, xtemp, ytemp;
@@ -26,7 +26,7 @@ public class Ball implements GameEntity {
         //velocit�.
         dx = 10;
         dy = 10;
-        colore = Color.WHITE;
+        colore = Color.GREEN;
 
         xdest = x;
         ydest = y;

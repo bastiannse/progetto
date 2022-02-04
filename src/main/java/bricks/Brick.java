@@ -8,17 +8,17 @@ public class Brick {
     //campi
     protected int x, y, width, height, strength;
     protected boolean isActive;
-    protected Color myColor;
+    protected Color colore;
 
     public Brick(int x, int y) {
 
         this.x = x;
         this.y = y;
-        width = 40;
-        height = 30;
+        width = 45;
+        height = 35;
         strength = (int) (Math.random() * 3);
         isActive = true;
-        myColor = new Color(0, 255 - strength * 100, 255 - strength * 100);
+        colore = new Color(0, 255 - strength * 100, 255 - strength * 100);
 
     }
 
@@ -40,7 +40,7 @@ public class Brick {
         if (strength < 0) {
             isActive = false;
         } else {
-            myColor = new Color(0, 255 - strength * 100, 255 - strength * 100);
+            colore = new Color(0, 255 - strength * 100, 255 - strength * 100);
         }
 
 
@@ -54,7 +54,7 @@ public class Brick {
 
     public void draw(Graphics2D g2) {
 
-        g2.setColor(myColor);
+        g2.setColor(colore);
         g2.fillRoundRect(x, y, width, height, 30, 20);
 
     }
